@@ -2,10 +2,10 @@ package centiconv
 
 import "fmt"
 
-type inch float64
-type meter float64
+type Inch float64
+type Meter float64
 
-func (in inch) String() string { return fmt.Sprintf("%g英尺", in) }
-func (me meter) String() string { return fmt.Sprintf("%g英尺", me) }
-func IToM(in inch) meter { return meter(in * 0.3048) }
-func MToI(me meter) inch { return inch(me * 3.2808) }
+func (in Inch) String() string { return fmt.Sprintf("%g英尺", in) }
+func (me Meter) String() string { return fmt.Sprintf("%g英尺", me) }
+func IToM(in Inch) Meter { return Meter(in * 0.3048) }
+func MToI(me Meter) Inch { return Inch(me * 3.2808) }
